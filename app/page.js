@@ -12,8 +12,8 @@ export default async function Home() {
   const products = await getData()
   return (
     <main className='min-h-screen '>
-      <Title title={'Get your Favorite phone'}/>
-      <ProductsList data={products}/>
+      <Title title={'Get your Favorite phone'} />
+      <ProductsList data={products} />
     </main>
   )
 }
