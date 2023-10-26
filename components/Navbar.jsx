@@ -33,7 +33,7 @@ const Navbar = () => {
       <button className="btn btn-ghost btn-circle">
         <Link href={'/cart'} className="indicator">
           <span className="mr-2 text-xl">🛒</span>
-          <span className="badge badge-xs badge-primary indicator-item text-white p-2" >{length}</span>
+          <span className="badge badge-xs badge-primary indicator-item text-white py-2" >{length}</span>
         </Link>
       </button>
     </div>
