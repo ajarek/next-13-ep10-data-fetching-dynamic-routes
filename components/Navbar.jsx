@@ -1,7 +1,12 @@
+'use client'
 import Link from 'next/link'
-import React from 'react'
+import React, { useContext } from 'react'
+import { LengthCartContext } from '@/context/LengthCartContext' 
 
 const Navbar = () => {
+  const { length } = useContext(LengthCartContext)
+
+
   return (
     <div className="navbar bg-slate-100 ">
     <div className="navbar-start">
@@ -26,10 +31,10 @@ const Navbar = () => {
     <div className="navbar-end">
       
       <button className="btn btn-ghost btn-circle">
-        <div className="indicator">
+        <Link href={'/cart'} className="indicator">
           <span className="mr-2 text-xl">🛒</span>
-          <span className="badge badge-xs badge-primary indicator-item py-2" >0</span>
-        </div>
+          <span className="badge badge-xs badge-primary indicator-item text-white p-2" >{length}</span>
+        </Link>
       </button>
     </div>
   </div>
