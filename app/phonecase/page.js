@@ -9,7 +9,7 @@ async function getData(name) {
   return res.json()
 }
 export default async function Home() {
-  const products = await getData('phone')
+  const products = await getData('phonecase')
   return (
     <main className='min-h-screen '>
       <Title title={'Get your Favorite phone'} />

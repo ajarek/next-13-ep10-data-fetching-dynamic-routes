@@ -17,13 +17,26 @@ const EditProduct = async ({ params }) => {
   return (
     <div className='px-24 grid grid-cols-2 place-items-center'>
       <div>
-        <p>pageID: <span className='font-bold'>{_id}</span></p>
-        <p>title: <span className='font-bold'>{title}</span></p>
-        <p>description: <span className='font-bold'>{description}</span></p>
-        <p>brand: <span className='font-bold'>{brand}</span></p>
-        <p>category: <span className='font-bold'>{category}</span></p>
-        <p >price: <span className='font-bold'>{price}</span>$</p>
-        <ButtonAddCart id={_id}/>
+        <p>
+          pageID: <span className='font-bold'>{_id}</span>
+        </p>
+        <p>
+          title: <span className='font-bold'>{title}</span>
+        </p>
+        <p>
+          description: <span className='font-bold'>{description}</span>
+        </p>
+        <p>
+          brand: <span className='font-bold'>{brand}</span>
+        </p>
+        <p>
+          category: <span className='font-bold'>{category}</span>
+        </p>
+        <p>
+          price: <span className='font-bold'>{price}</span>$
+        </p>
+        
+        <ButtonAddCart id={_id} />
       </div>
       <div>
         <Image

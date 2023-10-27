@@ -1,7 +1,7 @@
 'use client'
 
-import { useRouter,redirect } from 'next/navigation'
-import { saveStorage, fetchStorage } from '@/utility/localStorage' 
+import { useRouter } from 'next/navigation'
+import { saveStorage, fetchStorage } from '@/utility/localStorage'
 import React, { useContext } from 'react'
 import { LengthCartContext } from '@/context/LengthCartContext'
 
@@ -13,14 +13,13 @@ async function getData(id) {
   return res.json()
 }
 
-
-const ButtonAddCart = async({id}) => {
+// eslint-disable-next-line @next/next/no-async-client-component
+const ButtonAddCart = async ({ id }) => {
   const { length, setLength } = useContext(LengthCartContext)
   const router = useRouter()
   const data = await getData(id)
- 
-  
-  const  addCart= ()=>{
+
+  const addCart = () => {
     const storeData = fetchStorage('Cart')
     const duble = storeData?.find((el) => el._id === id)
     if (duble) {
@@ -28,13 +27,17 @@ const ButtonAddCart = async({id}) => {
       router.push('/')
       return
     }
-    saveStorage(data,'Cart')
+    saveStorage(data, 'Cart')
     router.push('/cart')
-    setLength(length+1)
-    
+    setLength(length + 1)
   }
   return (
-    <button onClick={()=>addCart(id)} className="btn btn-success mt-4">Add to cart</button>
+    <button
+      onClick={() => addCart(id)}
+      className='btn btn-success mt-4'
+    >
+      Add to cart
+    </button>
   )
 }
 
