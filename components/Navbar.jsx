@@ -37,7 +37,7 @@ const Navbar = () => {
               <Link href={'/'}>PHONE </Link>
             </li>
             <li>
-              <Link href={'/phonecase'}>PHONE CASE</Link>
+              <Link href={'/'}>PHONE CASE</Link>
             </li>
             <li>
               <Link href={'/'}>WATCHES</Link>
@@ -56,7 +56,7 @@ const Navbar = () => {
           PHONE
         </Link>
         <Link
-          href={'/phonecase'}
+          href={'/'}
           className='btn btn-ghost normal-case text-xl'
         >
           PHONE CASE
