@@ -2,7 +2,7 @@ import ProductsList from '@/components/ProductsList'
 import Title from '@/components/Title'
 
 async function getData(name) {
-  const res = await fetch('https://jsonserver.reactbd.com/'+name)
+  const res = await fetch('https://jsonserver.reactbd.com/' + name)
   if (!res.ok) {
     throw new Error('Failed to fetch data')
   }

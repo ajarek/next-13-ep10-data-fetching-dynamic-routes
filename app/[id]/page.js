@@ -35,7 +35,7 @@ const EditProduct = async ({ params }) => {
         <p>
           price: <span className='font-bold'>{price}</span>$
         </p>
-        
+
         <ButtonAddCart id={_id} />
       </div>
       <div>

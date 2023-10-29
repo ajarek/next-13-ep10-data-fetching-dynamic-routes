@@ -1,5 +1,3 @@
-
-
 export const saveStorage = (newData, name) => {
   const localStorageData = localStorage.getItem(name)
   let data
