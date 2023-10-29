@@ -4,7 +4,7 @@ import React from 'react'
 
 const ProductsList = ({ data }) => {
   return (
-    <div className=' gap-4 px-8 py-8 grid grid-cols-1 sm:px-12 sm:grid-cols-2 md:grid-cols-3 xl:px-24 xl:grid-cols-4'>
+    <div className=' gap-4 px-8 max-sm:px-4 py-8 grid grid-cols-1 sm:px-12 sm:grid-cols-2 md:grid-cols-3 xl:px-24 xl:grid-cols-4'>
       {data.map((el) => {
         return (
           <Link key={el._id} href={`/${el._id}`}>
