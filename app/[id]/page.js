@@ -15,7 +15,7 @@ const EditProduct = async ({ params }) => {
   const { _id, title, description, image, brand, price, category } = data
 
   return (
-    <div className='px-24 grid grid-cols-2 place-items-center'>
+    <div className='px-24 grid grid-cols-2 place-items-center max-sm:grid-cols-1 max-sm:px-4'>
       <div>
         <p>
           pageID: <span className='font-bold'>{_id}</span>

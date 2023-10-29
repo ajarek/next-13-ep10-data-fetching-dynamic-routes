@@ -25,7 +25,7 @@ const Cart = () => {
   }
 
   return (
-    <div className='py-8 px-24'>
+    <div className='py-8 px-24 max-sm:px-4'>
       <h1 className='text-center text-xl font-bold mb-4'>Your Cart</h1>
       {length > 0 ? (
         <>
